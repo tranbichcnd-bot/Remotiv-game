@@ -17,9 +17,9 @@
 }
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;font-family:'Roboto',sans-serif}
 html,body{height:100%;background:var(--bg);overflow:hidden;color:var(--navy)}
-#app{width:100%;height:100%;max-width:430px;margin:0 auto;overflow:hidden;position:relative}
+#app{width:100%;height:100%;max-width:430px;margin:0 auto;overflow:hidden;position:relative;background:var(--bg)}
 
-.screen{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;overflow-y:auto;scrollbar-width:none;opacity:0;transform:translateX(60px);transition:opacity .3s ease,transform .3s cubic-bezier(.4,0,.2,1);pointer-events:none}
+.screen{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;overflow-y:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;opacity:0;transform:translateX(60px);transition:opacity .3s ease,transform .3s cubic-bezier(.4,0,.2,1);pointer-events:none}
 .screen::-webkit-scrollbar{display:none}
 .screen.active{opacity:1;transform:translateX(0);pointer-events:all}
 .screen.out{opacity:0;transform:translateX(-60px)}
@@ -128,11 +128,11 @@ html,body{height:100%;background:var(--bg);overflow:hidden;color:var(--navy)}
 
 <!-- ===== INTRO ===== -->
 <div class="screen active" id="s-intro">
-  <div id="hero" style="width:100%;position:relative;overflow:hidden;padding:28px 22px 36px;background:linear-gradient(175deg,#FFF9E0 0%,#FEF3C7 50%,#FDE8A8 100%)">
-    <div id="flower-bg" style="position:absolute;inset:0;pointer-events:none;overflow:hidden"></div>
+  <div id="hero" style="width:100%;position:relative;overflow:visible;padding:24px 22px 28px;background:linear-gradient(175deg,#FFF9E0 0%,#FEF3C7 50%,#FDE8A8 100%)">
+    <div id="flower-bg" style="position:absolute;inset:0;pointer-events:none;overflow:hidden;clip-path:inset(0)"></div>
     <div style="position:relative;z-index:2;text-align:center">
-      <div style="font-size:12px;font-weight:500;letter-spacing:2px;color:var(--orange);text-transform:uppercase;margin-bottom:8px">Tham gia &amp; nhận quà ngay</div>
-      <div style="font-size:52px;font-weight:900;color:var(--navy);line-height:1;margin-bottom:8px;letter-spacing:-1px">Remotiv<sup style="font-size:22px;vertical-align:super">®</sup> <span style="color:var(--orange)">500</span></div>
+      <div style="font-size:11px;font-weight:500;letter-spacing:2px;color:var(--orange);text-transform:uppercase;margin-bottom:6px">Tham gia &amp; nhận quà ngay</div>
+      <div style="font-size:44px;font-weight:900;color:var(--navy);line-height:1;margin-bottom:6px;letter-spacing:-1px">Remotiv<sup style="font-size:22px;vertical-align:super">®</sup> <span style="color:var(--orange)">500</span></div>
       <div style="display:inline-flex;align-items:center;gap:6px;background:var(--green);border-radius:30px;padding:5px 18px">
         <span style="font-size:11px;font-weight:700;letter-spacing:1.5px;color:#fff;text-transform:uppercase">🇨🇭 Made in Switzerland</span>
       </div>
